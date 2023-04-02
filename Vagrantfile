@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
 end
     config.vm.provision "shell", inline: <<-SHELL
     sudo apt-get -y update
-#    sudo touch /etc/apt/sources.list.d/pgdg.list
+    sudo touch /etc/apt/sources.list.d/pgdg.list
     sudo echo "deb https://apt.postgresql.org/pub/repos/apt/ precise-pgdg main" | sudo tee /etc/apt/sources.list.d/pgdg.list
     wget --no-check-certificate -qO - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
     sudo apt-get -y update
